@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Web</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="titre">Zone01 Oujda</h1>
+    </div>
+    <div class="border">
+        <div class="container">
+            <h2 class="titre2">ASCII-ART-WEB</h2>
+        </div>
+        <!-- Input square and submit button -->
+        <form class="choice-section" method="post" action="/asciiart">
+            <div class="input-section">
+                <div class="text">
+                    <textarea id="input-square" name="input-square" rows="5" cols="78"
+                        placeholder="Enter your text here" maxlength="1000" required></textarea>
+                </div>
+                <div class="butt">
+                    <button class="button" id="submit-button" type="submit">submit</button>
+                </div>
+                <div class="choiss">
+                    <label>
+                        <input type="radio" name="choice" value="standard">
+                        Standard
+                    </label>
+                    <label>
+                        <input type="radio" name="choice" value="shadow">
+                        Shadow
+                    </label>
+                    <label>
+                        <input type="radio" name="choice" value="thinkertoy">
+                        Thinkertoy
+                    </label>
+                </div>
+            </div>
+        </form>
+
+        <form class="pre">
+            <div>
+                <pre>{{ .AsciiArt }}</pre>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
